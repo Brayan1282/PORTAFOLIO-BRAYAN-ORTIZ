@@ -23,47 +23,351 @@ html {
     scroll-behavior: smooth;
 }
 
+@import
+url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
+    url(../img/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "work sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@import
+url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
+    url(../img/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "work sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* CSS */
 .container-header {
-    background: black;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 99;
+  background: #000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
 }
 
+/* header flex para logo (izq) y nav (der) */
 .container-header header {
-    max-width: 1100px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  box-sizing: border-box;
 }
 
+/* logo */
 .container-header header .logo a {
-    font-family: 'righteous', cursive;
-    font-size: 36px;
-     color: blue;
-    text-decoration: none;
+  font-family: 'righteous', cursive;
+  font-size: 34px;
+  color: rgb(0, 0, 255);
+  text-decoration: none;
 }
 
-.container-header header ul {
-    display: flex;
-    list-style: none;
+/* --> REGLAS IMPORTANTES para que el menú sea horizontal */
+.container-header header nav {
+  margin-left: auto; /* empuja el nav a la derecha */
+}
+
+.container-header header nav ul {
+  display: flex;                /* fila flexible */
+  flex-direction: row;         /* asegurar fila */
+  flex-wrap: nowrap;           /* que no bajen a otra línea */
+  align-items: center;         /* centrar vertical */
+  gap: 48px;                   /* espacio entre items (ajusta) */
+  margin: 0;                   /* quitar márgenes por defecto */
+  padding: 0;                  /* quitar padding por defecto */
+  list-style: none;
+}
+
+.container-header header nav ul li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .container-header header nav ul li a {
-    text-align: center;
-    color: #fff;
-    margin: 0 15px;
-    padding: 3px;
-    transition: .5s;
-    text-decoration: none;
+  display: inline-block;       /* evita que ocupen toda la línea */
+  color: #fff;
+  text-align: center;
+  padding: 6px 4px;
+  text-decoration: none;
+  transition: color .25s;
+  font-size: 18px;             /* ajustar tamaño si quieres */
 }
 
 .container-header header nav ul li a:hover {
-    color: blue
+  color: blue;
+}
+
+
+
+/* BODY*/
+
+.img{
+    width: 300px;
+    height: 200px;
+    display: flex;
+    margin: 8px;
+    padding: 10px;
+    border-radius: 18px ;
+    position: relative;
+}
+
+h1{
+    text-align: center;
+    color: rgb(255, 255, 255); 
+    font-weight: bold;
+    margin-top: 100px;
+    color: blue;
+    font-style: italic;
+    
+}
+h3{
+    text-align: center;
+    color: rgb(255, 255, 255); 
+    font-weight: bold; 
+    font-style: italic;
+
+}
+p{
+    text-align: center;
+    color: rgb(255, 255, 255); 
+    font-style: italic;
+    margin-top: 30px;
+}
+section{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.container{
+    width: 360px;
+    height: 480px ;
+    padding: 10px;
+    margin-top: 200px;
+    box-sizing: border-box;
+    position: relative;
+    background: #030303;
+    border-radius: 20px;
+}
+.container:hover{
+ background-color: rgba(53, 55, 53, 0.919);
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+footer{
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    padding: 30px 50px ;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    margin-top: 4.5%;
+}
+footer .redes{
+    margin-bottom: 20px;
+}
+footer .redes a{
+    color: #fff;
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 10px;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+footer .redes a:hover{
+    background: rgb(0, 17, 255);
+    border-color: rgb(17, 0, 255);
+    transform: scale(1.1);
+}
+
+
+@media (max-width: 768px) {
+  nav{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+.logo{
+  height: 50px;
+  margin-bottom: 10px;
+}
+nav ul {
+  flex-direction: column;
+  gap: 15px;
+}
+@media (max-width: 768px) {
+  section {
+    flex-direction: column; 
+    align-items: center;    
+  }
+}
+
+section {
+    margin-top: 80px;
+}
+
+.curriculum {
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.curriculum .container-section {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.curriculum h2 {
+    font-size: 48px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.curriculum .fila {
+    display: flex;
+}
+
+.curriculum .fila .col {
+    width: 49%;
+    padding: 0 20px;
+}
+
+.curriculum .fila .col h3 {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+.curriculum .fila .izquierda {
+    border-right: solid #001bcc;
+}
+
+.curriculum .fila .derecha {
+     border-right: solid #0015b4;
+}
+
+.curriculum .fila .item {
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: #252525;
+    position: relative;
+}
+
+.curriculum .fila .item h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.curriculum .fila .item .casa {
+    color: #0006b4;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+}
+
+.curriculum .fila .item .fecha {
+    display: block;
+    color: #0d00c8;
+    margin-bottom: 10px;
+}
+
+.curriculum .fila .item p {
+    line-height: 24px;
+}
+
+.curriculum .fila .izq {
+     border-left: 2px solid #0700c4;
+}
+
+.curriculum .fila .der {
+    border-left: 2px solid #0019d2;
+}
+
+.curriculum .fila .item .conectori {
+    height: 2px;
+    background-color: #0800ff;
+    width: 47px;
+    position: absolute;
+    top: 50px;
+    right: -47px;
+    z-index: 5;
+}
+
+.curriculum .fila .item .conectori .circuloi {
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+   background-color: #0800f8;
+    margin: 0 auto;
+    position: relative;
+    bottom: 4px;
+}
+
+@media (max-width: 768px) {
+  nav{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+.logo{
+  height: 50px;
+  margin-bottom: 10px;
+}
+nav ul {
+  flex-direction: column;
+  gap: 15px;
+}
+@media (max-width: 768px) {
+  section {
+    flex-direction: column; 
+    align-items: center;    
+  }
 }
 
 section {
