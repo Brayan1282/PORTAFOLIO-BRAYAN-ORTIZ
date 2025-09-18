@@ -247,7 +247,10 @@ footer .redes a:hover{
     font-size: 36px;
   }
 
- 
+  .sobremi .fila {
+    flex-direction: column;
+  }
+
   .sobremi .fila .col {
     width: 100%;
     margin-bottom: 30px;
